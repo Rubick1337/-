@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="index.css">
+<meta name="viewport" content="width=device-width">
+<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+<title>Валентинка</title>
+</head>         
+<body>
+    <div class="container-gif">
+        <img src ="cute-love-bear-roses-ou7zho5oosxnpo6k.gif" class="gif-bear" alt="милая гифка медведей" >
+    </div>
+    <h2 class="text-congratulations">Будешь ли ты моим Валентином?</h2>
+<div class="container-button">
+    <button onclick="increaseDivGreen()" id="green-button">
+        Да
+    </button>
+    <button onclick="increaseDiv()" id="red-button">
+        Нет
+    </button>
+</div>
+<script>
+    var currentIndex = 0;
+var words = ["Ты серьезно?", "Подумай хорошо", "Мне будет грустно", "Очень грустно", "Очень очень грустно","Очень очень очень грустно","Ладно я даю последний шанс"];
+function increaseDiv() {
+    var myDiv = document.querySelector("#green-button");
+    var myDivRed = document.querySelector("#red-button")
+    var currWidth = myDiv.clientWidth;
+    var currHeight = myDiv.clientHeight;
+    var computedFontSize = window.getComputedStyle(myDiv).fontSize;
+    var currentFontSize = parseFloat(computedFontSize);
+    myDiv.style.width = currWidth + 50 + "px";
+    myDiv.style.height = currHeight + 30 + "px";
+    myDiv.style.fontSize = currentFontSize + 25 + "px";
+    var currentWord = words[currentIndex];
+    myDivRed.textContent = currentWord;
+    currentIndex++;
+    if (currentIndex >= words.length) {
+        currentIndex = 0;
+    }
+}
+function increaseDivGreen()
+{
+    var myDiv = document.querySelector("#green-button");
+    var myDivRed = document.querySelector("#red-button")
+    var myImg = document.querySelector(".gif-bear");
+    var Text = document.querySelector(".text-congratulations")
+    myImg.src = "bear-kiss-bear-kisses.gif";
+    Text.textContent = "Ура!!!";
+    myDiv.style.display = "none";
+    myDivRed.style.display = "none";
+}
+</script>
+</body>
+</html>

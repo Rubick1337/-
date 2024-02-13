@@ -1,0 +1,63 @@
+.gif-bear
+{
+width: 280px;
+height: 280px;
+}
+
+.container-gif
+{
+    margin-top: 120px;
+    display: flex; 
+    justify-content: center;
+    justify-self: center;
+}
+.container-button
+{
+    margin-top: 30px;
+    display: flex; 
+    justify-content: center;
+    justify-self: center;
+    gap:50px;
+}
+.text-congratulations
+{
+    display: flex; 
+    justify-content: center;
+    justify-self: center;
+}
+#green-button
+{
+    font-size: 15px;
+    color:aliceblue;
+    width: 105px;
+    height: 58px;
+    border-radius: 4px;
+    border: 1px solid #0abc0a;
+    background: #0abc0a ;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+#red-button
+{
+    font-size: 15px;
+    color:aliceblue;
+    width: 105px;
+    height: 58px;
+    border-radius: 4px;
+    border: 1px solid #df2121;
+    background: #df2121;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+#green-button:hover
+{
+    border-radius: 4px;
+    border: 1px solid #08752a;
+    background: #08752a;
+}
+#red-button:hover
+{
+    border-radius: 4px;
+    border: 1px solid #a30c0c;
+    background: #a30c0c;
+}
